@@ -1,6 +1,6 @@
-import {PrismaClient} from '@prisma/client'
 
-import React, {useState} from 'react'
+
+import {useState} from 'react'
 //import { PrismaClientValidationError } from '@prisma/client/runtime';
 export default  function Register() {
 
@@ -20,7 +20,7 @@ export default  function Register() {
          if(email.length == 0 || name.length == 0) {
             
          }  else {
-         fetch('api/register', {
+         fetch('/api/register', {
                method: 'POST',
                headers: {
                   'Content-Type': 'application/json',
