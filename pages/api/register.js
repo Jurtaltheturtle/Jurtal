@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client"
 
-const prisma = new PrismaClient()
 export default async function handle(req, res) {
+  const prisma = new PrismaClient()
   // console.log(req.body);
   await prisma.$connect();
   if(await prisma.user.findFirst({where: { email: req.body.email}})) {
